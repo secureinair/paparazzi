@@ -98,7 +98,7 @@ comment everything that is 2 lines back when you stop simulaton-->
 
     <define name="BODY_TO_IMU_PHI"   value="RadOfDeg(  0.)"/>
     <define name="BODY_TO_IMU_THETA" value="RadOfDeg(  0.)"/>
-    <define name="BODY_TO_IMU_PSI"   value="RadOfDeg(  -45.)"/>
+    <define name="BODY_TO_IMU_PSI"   value="RadOfDeg(  90.)"/>
 
   </section>
 
@@ -259,14 +259,14 @@ http://ngdc.noaa.gov/geomag/magfield.shtml
        use mag to update yaw only
      <define name="AHRS_PROPAGATE_LOW_PASS_RATES"/> 
      <define name="AHRS_MAG_UPDATE_YAW_ONLY "/>-->
-    <target name="ap" board="lisa_l_1.0"/>
+    <target name="ap" board="lisa_l_1.1"/>
     <target name="sim" board="pc">
       <subsystem name="fdm"           type="nps"/>
     </target>
     <subsystem name="telemetry"     type="transparent"/>
     <subsystem name="radio_control" type="ppm"/>
     <subsystem name="actuators"     type="mkk"/>
-    <subsystem name="imu"           type="b2_v1.1"/>
+    <subsystem name="imu"           type="b2_v1.2"/>
     <subsystem name="ahrs"          type="cmpl"/>
  <!--     <subsystem name="ahrs"          type="ic"/> activate section name="AHRS" for local magnetiq feeld-->
     <subsystem name="gps"           type="ublox">
