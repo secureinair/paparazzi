@@ -1,13 +1,17 @@
 <!-- this is an asctec frame equiped with  Lisa/L#3 and asctec V2 controllers and MKK controles for simulation 
 comment everything that is 2 lines back when you stop simulaton-->
 
-<airframe name="booz2_a7">
+<airframe name="octo_secureinair">
 
   <servos min="0" neutral="0" max="0xff">
-    <servo name="FRONT"   no="0" min="0" neutral="0" max="255"/>
-    <servo name="BACK"    no="1" min="0" neutral="0" max="255"/>
-    <servo name="LEFT"    no="2" min="0" neutral="0" max="255"/>
-    <servo name="RIGHT"   no="3" min="0" neutral="0" max="255"/>
+    <servo name="FRONTLEFT"   no="0" min="0" neutral="0" max="255"/>
+    <servo name="FRONTRICHT"  no="1" min="0" neutral="0" max="255"/>
+    <servo name="RICHTFRONT"  no="2" min="0" neutral="0" max="255"/>
+    <servo name="RIGHTBACK"   no="3" min="0" neutral="0" max="255"/>
+    <servo name="BACKRICHT"   no="4" min="0" neutral="0" max="255"/>
+    <servo name="BACKLEFT"    no="5" min="0" neutral="0" max="255"/>
+    <servo name="LEFTBACK"    no="6" min="0" neutral="0" max="255"/>
+    <servo name="LEFTFRONT"   no="7" min="0" neutral="0" max="255"/>
   </servos>
 
   <commands>
@@ -18,8 +22,8 @@ comment everything that is 2 lines back when you stop simulaton-->
   </commands>
 
     <section name="ACTUATORS_MKK" prefix="ACTUATORS_MKK_">
-      <define name="NB" value="4"/>
-      <define name="ADDR" value="{ 0x52, 0x58, 0x56, 0x54 }"/>
+      <define name="NB" value="8"/>
+      <define name="ADDR" value="{ 0x52, 0x54 , 0x56 , 0x58 , 0x5A, 0X5C , 0x5E , 0x60}"/>
     </section>
 
   <section name="SUPERVISION" prefix="SUPERVISION_">
@@ -28,7 +32,7 @@ comment everything that is 2 lines back when you stop simulaton-->
     <define name="TRIM_A" value="0"/>
     <define name="TRIM_E" value="0"/>
     <define name="TRIM_R" value="0"/>
-    <define name="NB_MOTOR" value="4"/>
+    <define name="NB_MOTOR" value="8"/>
     <define name="SCALE" value="256"/>
     <define name="ROLL_COEF"   value="{  0  ,    0, -256,  256 }"/>
     <define name="PITCH_COEF"  value="{  256, -256,    0,    0 }"/>
@@ -37,6 +41,7 @@ comment everything that is 2 lines back when you stop simulaton-->
   </section>
 
   <section name="IMU" prefix="IMU_">
+
 <!--
       <define name="GYRO_P_CHAN" value="1"/>
       <define name="GYRO_Q_CHAN" value="0"/>
@@ -46,13 +51,13 @@ comment everything that is 2 lines back when you stop simulaton-->
       <define name="GYRO_Q_SIGN" value="1"/>
       <define name="GYRO_R_SIGN" value="1"/>
 -->
-    <define name="GYRO_P_NEUTRAL" value="31948"/>
-    <define name="GYRO_Q_NEUTRAL" value="31834"/>
-    <define name="GYRO_R_NEUTRAL" value="32687"/>
+<define name="GYRO_P_NEUTRAL" value="32163"/>
+<define name="GYRO_Q_NEUTRAL" value="32175"/>
+<define name="GYRO_R_NEUTRAL" value="32813"/>
 
-    <define name="GYRO_P_SENS" value=" -1.101357422" integer="16"/>
-    <define name="GYRO_Q_SENS" value=" -1.122670898" integer="16"/>
-    <define name="GYRO_R_SENS" value=" 1.104890137" integer="16"/>
+<define name="GYRO_P_SENS" value="0.88765" integer="16"/>
+<define name="GYRO_Q_SENS" value="0.88347" integer="16"/>
+<define name="GYRO_R_SENS" value="0.90310" integer="16"/>
 <!--
       <define name="ACCEL_X_CHAN" value="3"/>
       <define name="ACCEL_Y_CHAN" value="5"/>
@@ -62,13 +67,13 @@ comment everything that is 2 lines back when you stop simulaton-->
       <define name="ACCEL_Y_SIGN" value="-1"/>
       <define name="ACCEL_Z_SIGN" value="1"/>
 -->
-<define name="ACCEL_X_SENS" value="-2.54487436657" integer="16"/>
-<define name="ACCEL_Y_SENS" value="-2.55130958717" integer="16"/>
-<define name="ACCEL_Z_SENS" value="2.55464591565" integer="16"/>
+<define name="ACCEL_X_NEUTRAL" value="26015"/>
+<define name="ACCEL_Y_NEUTRAL" value="26566"/>
+<define name="ACCEL_Z_NEUTRAL" value="26247"/>
 
-<define name="ACCEL_X_NEUTRAL" value="32771"/>
-<define name="ACCEL_Y_NEUTRAL" value="32895"/>
-<define name="ACCEL_Z_NEUTRAL" value="32148"/>
+<define name="ACCEL_X_SENS" value="1.87152988573" integer="16"/>
+<define name="ACCEL_Y_SENS" value="1.87112308641" integer="16"/>
+<define name="ACCEL_Z_SENS" value="1.91198103282" integer="16"/>
 <!--
       <define name="MAG_X_CHAN" value="4"/>
       <define name="MAG_Y_CHAN" value="0"/>
@@ -83,13 +88,13 @@ comment everything that is 2 lines back when you stop simulaton-->
 
 
 
-<define name="MAG_X_SENS" value="4.68438721124" integer="16"/>
-<define name="MAG_Y_SENS" value="4.54132316969" integer="16"/>
-<define name="MAG_Z_SENS" value="2.69730737452" integer="16"/>
+<define name="MAG_X_NEUTRAL" value="0"/>
+<define name="MAG_Y_NEUTRAL" value="0"/>
+<define name="MAG_Z_NEUTRAL" value="0"/>
 
-<define name="MAG_X_NEUTRAL" value="27"/>
-<define name="MAG_Y_NEUTRAL" value="-12"/>
-<define name="MAG_Z_NEUTRAL" value="-13"/>
+<define name="MAG_X_SENS" value="1." integer="16"/>
+<define name="MAG_Y_SENS" value="1." integer="16"/>
+<define name="MAG_Z_SENS" value="1." integer="16"/>
 
     <define name="BODY_TO_IMU_PHI"   value="RadOfDeg(  0.)"/>
     <define name="BODY_TO_IMU_THETA" value="RadOfDeg(  0.)"/>
