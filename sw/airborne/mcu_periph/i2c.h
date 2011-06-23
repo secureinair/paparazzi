@@ -48,7 +48,7 @@ struct i2c_transaction {
 };
 
 #ifndef I2C_TRANSACTION_QUEUE_LEN
-#define I2C_TRANSACTION_QUEUE_LEN 8
+#define I2C_TRANSACTION_QUEUE_LEN 16
 #endif
 
 struct i2c_periph {

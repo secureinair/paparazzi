@@ -34,7 +34,7 @@ comment everything that is 2 lines back when you stop simulaton-->
     <define name="TRIM_R" value="0"/>
     <define name="NB_MOTOR" value="8"/>
     <define name="SCALE" value="256"/>
-    <define name="ROLL_COEF"   value="{ -115,  115,  256,  256,  115, -115, -256, -256 }"/>
+    <define name="ROLL_COEF"   value="{  115, -115, -256, -256, -115,  115,  256,  256 }"/>
     <define name="PITCH_COEF"  value="{  256,  256,  105, -105, -256, -256, -105,  105 }"/>
     <define name="YAW_COEF"    value="{  256, -256,  256, -256,  256, -256,  256, -256 }"/>
     <define name="THRUST_COEF" value="{  256,  256,  256,  256,  256,  256,  256,  256 }"/>
