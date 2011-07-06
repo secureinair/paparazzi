@@ -2,11 +2,11 @@
   <aircraft
    name="Microjet"
    ac_id="5"
-   airframe="airframes/microjet_example.xml"
+   airframe="airframes/PPZUAV/fixed-wing/ppzimu_tiny.xml"
    radio="radios/cockpitMM.xml"
    telemetry="telemetry/default.xml"
    flight_plan="flight_plans/versatile.xml"
-   settings=" settings/tuning.xml"
+   settings=" settings/tuning_basic_ins.xml"
    gui_color="#6293ba"
   />
   <aircraft
